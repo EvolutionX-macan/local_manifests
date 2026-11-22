@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="macan" fetch="https://github.com/EvolutionX-macan" />
+
+  <!-- Kernel -->
+  <include name="manifests/snippets/kernel-6.12.xml" />
+
+  <project path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850"
+           name="android_kernel_oneplus_sm8850"
+           remote="macan"
+           revision="lineage-24.0" />
+
+  <project path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850-devicetrees"
+           name="android_kernel_oneplus_sm8850-devicetrees"
+           remote="macan"
+           revision="lineage-24.0" />
+
+  <project path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850-modules"
+           name="android_kernel_oneplus_sm8850-modules"
+           remote="macan"
+           revision="lineage-24.0" />
+
+  <!-- OnePlus device trees -->
+  <project path="device/oneplus/macan-camera"
+           name="android_device_oneplus_macan-camera"
+           remote="macan"
+           revision="lineage-24.0" />
+
+  <project path="device/oneplus/macanc"
+           name="android_device_oneplus_macanc"
+           remote="macan"
+           revision="lineage-24.0" />
+
+  <project path="device/oneplus/macan"
+           name="android_device_oneplus_macan"
+           remote="macan"
+           revision="lineage-24.0" />
+
+  <project path="device/oneplus/sm8850-common"
+           name="android_device_oneplus_sm8850-common"
+           remote="macan"
+           revision="lineage-24.0" />
+
+  <!-- OnePlus hardware -->
+  <project path="hardware/oplus"
+           name="android_hardware_oplus"
+           remote="macan"
+           revision="lineage-24.0" />
+
+  <!-- QCOM display and sepolicy -->
+  <remove-project path="hardware/qcom-caf/sm8850/display/hal" />
+  <project path="hardware/qcom-caf/sm8850/display/hal"
+           name="android_hardware_qcom_display"
+           remote="macan"
+           revision="lineage-24.0-caf-sm8850"
+           groups="qcom" />
+
+  <remove-project path="hardware/qcom-caf/sm8850/display/core" />
+  <project path="hardware/qcom-caf/sm8850/display/core"
+           name="android_vendor_qcom_opensource_display-core"
+           remote="macan"
+           revision="lineage-24.0-caf-sm8850"
+           groups="qcom" />
+
+  <remove-project path="device/qcom/sepolicy_vndr/sm8850" />
+  <project path="device/qcom/sepolicy_vndr/sm8850"
+           name="android_device_qcom_sepolicy_vndr"
+           remote="macan"
+           revision="lineage-24.0-caf-sm8850"
+           groups="kaanapali-vendor,qcom" />
+
+  <!-- Patches -->
+  <project path="vendor/patches"
+           name="vendor_patches"
+           remote="macan"
+           revision="lineage-24.0" />
+</manifest>
